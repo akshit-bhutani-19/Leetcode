@@ -3,11 +3,13 @@
 using namespace std;
 
 vector<int> SelectionSort(vector<int> v){
-    int pointer, min;
+    int pointer=0;
+    int min=v[0];
     int temp;
     int n=v.size();
-    for(int i=0; i<n; i++){
-        min=99990;
+    for(int i=0; i<n-1; i++){
+        min=v[i];
+        pointer=i;
         for(int j=i;j<n;j++){
             if(v[j]<min){
                 min = v[j];
